@@ -25,4 +25,4 @@ const User = db.define('users', {
     await db.sync();
 })();
  
-export default User;
+module.exports = User

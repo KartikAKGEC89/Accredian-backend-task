@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+const router = require('./routes/index');
 app.use(express.json());
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 dotenv.config();
+app.use(router);
 
 
 app.get('/', (req, res) => {
